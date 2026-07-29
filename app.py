@@ -31,7 +31,7 @@ TICKERS = {
     'Financials': ['JPM', 'BAC', 'MA', 'V'],
     'Energy':     ['XOM', 'CVX', 'COP', 'SLB'],
     'Retail':     ['WMT', 'TGT', 'HD', 'COST'],
-    'Payments':   ['PYPL', 'FIS', 'GPN'],
+    'Payments':   ['PYPL', 'SQ', 'FIS', 'GPN'],
 }
 ALL_TICKERS = [t for group in TICKERS.values() for t in group]
 SECTOR_MAP = {t: sector for sector, group in TICKERS.items() for t in group}

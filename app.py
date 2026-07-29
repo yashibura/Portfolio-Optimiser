@@ -118,7 +118,9 @@ if module.startswith("1"):
     st.write(f"Best individual asset Sharpe: **{indiv_sharpe.max():.3f}** ({indiv_sharpe.idxmax()})")
     st.write(f"Tangency portfolio Sharpe: **{sharpe:.3f}**")
     passed = sharpe >= indiv_sharpe.max()
-    st.success("✓ Check passed: portfolio beats every individual asset") if passed else \
+    if passed:
+        st.success("✓ Check passed: portfolio beats every individual asset")
+    else:
         st.error("✗ Check FAILED — portfolio underperforms best individual asset. Something is wrong.")
 
     with st.expander("Individual asset Sharpe ratios"):
